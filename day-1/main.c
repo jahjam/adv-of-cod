@@ -12,11 +12,10 @@ int main(int argc, char const *argv[])
     int size_of_array = 0;
 
     // handle file opening
-    fp = fopen("./test-data.txt", "r");
+    fp = fopen("./example-data.txt", "r");
     if (fp == NULL)
     {
         printf("File not found.");
-        fclose(fp);
     }
     // dirty way of getting size of array
     // defo not optimal but cba writing an
@@ -75,12 +74,10 @@ int main(int argc, char const *argv[])
             sum_of_all += ans;
             continue;
         }
-
-        if (num_a < num_b)
+        else
         {
             int ans = num_b - num_a;
             sum_of_all += ans;
-            continue;
         }
     }
 
